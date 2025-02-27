@@ -1,0 +1,194 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark background */
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Website Title */
+  .website-title {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+  }
+  
+  .website-title h1 {
+    margin: 0;
+    font-size: 32px; /* Bigger title */
+    color: white; /* White title */
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: #2c3e50;
+    z-index: 999;
+    transition: transform 0.3s ease;
+  }
+  
+  .search-bar.minimized {
+    transform: translateY(-100%);
+  }
+  
+  .search-bar input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search-bar button:hover {
+    background-color: #16a085;
+  }
+  
+  /* Button to Reopen Search */
+  .open-search-button {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .open-search-button:hover {
+    background-color: #16a085;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    width: 350px;
+    height: 100vh; /* Full height */
+    background-color: #2c3e50;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+  }
+  
+  /* Button Row (Fixed Position) */
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 60px; /* Position below the title */
+    left: 0px;
+    width: 350px; /* Match sidebar width */
+    background-color: #2c3e50; /* Match sidebar background */
+    padding: 10px;
+    z-index: 999; /* Ensure it's above other content */
+    gap: 5px; /* Space between buttons */
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; /* Distribute space evenly */
+  }
+  
+  .nav-button {
+    width: 100%; /* Full width of container */
+    padding: 10px;
+    color: white;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    background-color: #34495e;
+  }
+  
+  .nav-button:hover {
+    background-color: #1abc9c;
+  }
+  
+  .underline {
+    width: 100%;
+    height: 3px;
+  }
+  
+  .nav-button.selected {
+    background-color: var(--selected-color);
+  }
+  
+  /* Chart Display Area */
+  .chart-display {
+    margin-top: 120px; /* Space for title and button row */
+  }
+  
+  .chart-item {
+    margin-bottom: 10px;
+  }
+  
+  .chart-item h3 {
+    margin: 0;
+    color: #1abc9c;
+  }
+  
+  .chart-item button {
+    padding: 10px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .chart-item button:hover {
+    background-color: #16a085;
+  }
+  
+  /* PDF Viewer */
+  .pdf-viewer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 350px;
+    width: calc(100% - 350px);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+  }
+  
+  .close-pdf {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .close-pdf:hover {
+    background-color: #c0392b;
+  }
